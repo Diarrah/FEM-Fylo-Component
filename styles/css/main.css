@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+html {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #dddbff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  background-color: #0c122c;
+}
+
+body .background {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+body .background--mobile {
+  display: none;
+  width: 100vw;
+}
+
+body .background--desktop {
+  height: 50vh;
+  width: 100vw;
+}
+
+body .background--desktop img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 872px) {
+  body .background--desktop {
+    display: none;
+  }
+  body .background--mobile {
+    display: block;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 80vw;
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.container .cta {
+  background-color: #1d2c67;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  padding: 45px 20px;
+  border-radius: 5px 100px 5px 5px;
+  max-width: 462px;
+}
+
+.container .cta__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 150px;
+}
+
+.container .cta__btns .btn__container {
+  background-color: #0c122c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+  height: 35px;
+  width: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 40px;
+  cursor: pointer;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.container .cta__btns .btn__container:hover {
+  background-color: #dddbff;
+}
+
+.container .cta__btns .btn__container:hover svg path {
+  fill: #0c122c;
+}
+
+.container .cta__btns .btn__container:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+@media screen and (max-width: 375px) {
+  .container .cta {
+    padding: 35px 20px;
+  }
+  .container .cta .btn__container {
+    margin-top: 20px;
+  }
+}
+
+.container .storage {
+  background-color: #1d2c67;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-top: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  padding: 50px 30px;
+  border-radius: 5px;
+  max-width: 800px;
+}
+
+.container .storage__bubble {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  background-color: #fff;
+  color: #848794;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: .75em;
+  padding: 10px 20px;
+  z-index: 2;
+  border-radius: 5px;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  width: 150px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.container .storage__bubble span {
+  font-size: 2rem;
+  color: black;
+  margin-right: 8px;
+}
+
+.container .storage__bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid white;
+  border-left: 25px solid transparent;
+  top: 93%;
+  right: 0;
+}
+
+.container .storage__textbox span {
+  font-weight: 700;
+}
+
+.container .storage .graph {
+  width: 100%;
+}
+
+.container .storage .graph .percentage__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 17px;
+  width: 98%;
+  background-color: rgba(12, 18, 44, 0.3);
+  border-radius: 10px;
+  margin: 10px auto 5px;
+}
+
+.container .storage .graph .percentage__container .percentage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 3px;
+  width: 81.5%;
+  height: 12.5px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+}
+
+.container .storage .graph .percentage__container .percentage::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+  top: 1px;
+  bottom: 0;
+  right: 0;
+  left: calc(100% - 12px);
+  border-radius: 50%;
+}
+
+.container .storage .graph .storage__potential {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.container .storage .graph .storage__potential span {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 872px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .cta {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 100%;
+    max-width: calc(872px - 40vw);
+    margin-bottom: 30px;
+  }
+  .container .storage__bubble {
+    top: 100%;
+    bottom: 0;
+    left: calc(50% - 75px);
+    right: 0;
+  }
+  .container .storage__bubble::after {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
