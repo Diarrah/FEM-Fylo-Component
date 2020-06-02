@@ -58,13 +58,13 @@ body .background--desktop img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   width: 80vw;
   margin: 0 auto;
-  -ms-flex-item-align: center;
-      align-self: center;
 }
 
 .container .cta {
@@ -74,7 +74,7 @@ body .background--desktop img {
           flex: 0 0 35%;
   padding: 45px 20px;
   border-radius: 5px 100px 5px 5px;
-  max-width: 462px;
+  max-width: 300px;
 }
 
 .container .cta__btns {
@@ -87,7 +87,7 @@ body .background--desktop img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 150px;
+  width: 150px;
 }
 
 .container .cta__btns .btn__container {
@@ -95,15 +95,15 @@ body .background--desktop img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 5px;
-  height: 35px;
-  width: 35px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 35px;
+  width: 35px;
+  border-radius: 5px;
   margin-top: 40px;
   cursor: pointer;
   -webkit-transition: .2s ease-in-out;
@@ -157,7 +157,7 @@ body .background--desktop img {
   max-width: 800px;
 }
 
-.container .storage__bubble {
+.container .storage__notification {
   position: absolute;
   top: 0;
   right: 30px;
@@ -178,13 +178,13 @@ body .background--desktop img {
   height: min-content;
 }
 
-.container .storage__bubble span {
+.container .storage__notification span {
   font-size: 2rem;
   color: black;
   margin-right: 8px;
 }
 
-.container .storage__bubble::after {
+.container .storage__notification::after {
   content: '';
   position: absolute;
   width: 0;
@@ -195,15 +195,15 @@ body .background--desktop img {
   right: 0;
 }
 
-.container .storage__textbox span {
+.container .storage__statement span {
   font-weight: 700;
 }
 
-.container .storage .graph {
+.container .storage__graph {
   width: 100%;
 }
 
-.container .storage .graph .percentage__container {
+.container .storage__graph .progress__bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,7 +217,7 @@ body .background--desktop img {
   margin: 10px auto 5px;
 }
 
-.container .storage .graph .percentage__container .percentage {
+.container .storage__graph .progress__bar .total__progress {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,7 +230,7 @@ body .background--desktop img {
   background: linear-gradient(to right, #ffa399, #ff4d97);
 }
 
-.container .storage .graph .percentage__container .percentage::after {
+.container .storage__graph .progress__bar .total__progress::after {
   content: '';
   position: absolute;
   height: 10px;
@@ -243,7 +243,7 @@ body .background--desktop img {
   border-radius: 50%;
 }
 
-.container .storage .graph .storage__potential {
+.container .storage__graph .capacity {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -253,7 +253,7 @@ body .background--desktop img {
   width: 100%;
 }
 
-.container .storage .graph .storage__potential span {
+.container .storage__graph .capacity span {
   font-weight: 700;
 }
 
@@ -272,16 +272,16 @@ body .background--desktop img {
         -ms-grid-row-align: center;
         align-self: center;
     width: 100%;
-    max-width: calc(872px - 40vw);
+    max-width: 872px;
     margin-bottom: 30px;
   }
-  .container .storage__bubble {
+  .container .storage__notification {
     top: 100%;
     bottom: 0;
     left: calc(50% - 75px);
     right: 0;
   }
-  .container .storage__bubble::after {
+  .container .storage__notification::after {
     display: none;
   }
 }
